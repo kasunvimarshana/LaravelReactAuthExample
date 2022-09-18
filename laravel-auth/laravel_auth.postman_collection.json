@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "ad793216-8c38-4fce-9964-1d0b3d6b1460",
+		"name": "laravel_auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "kasun",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "vimarshana",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "kasunvmail@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "password_confirm",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "kasunvmail@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fogot Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "kasunvmail@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/fogot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"fogot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "xHhRL0blrUIP",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "password_confirm",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/reset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
